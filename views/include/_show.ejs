@@ -1,0 +1,20 @@
+   
+<% for(var i=0; i < data.length; i++) { %>
+  <tbody>
+  
+
+   <tr>
+   <td><%= i+1 %></td>
+     <td><%= data[i].name %></td>
+     <td><%= data[i].email %></td>
+     <td><%= data[i].gender %></td>
+     <td><%= data[i].status %></td>
+      <td><a href="/upe_user/<%= data[i]._id%>" type="button" class="btn btn-outline-success btn-small"><i class="bi bi-pencil">edit</i></a>
+
+     <a href="/api/del-users/<%= data[i]._id%>" type="button" class="btn btn-outline-success btn-small"><i class="bi bi-trash">delete</i></a></td>
+          </tr>
+
+ 
+  
+  </tbody>
+     <% } %>
